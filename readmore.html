@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9628c18b46.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Toorso | Travel & Tourism Guide Directory Website and Offline Mobile App</title>
+</head>
+
+<body>
+
+    <div class="section header-bg" style="padding: 1.5rem 0rem;">
+        <div class="container">
+            <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;">
+                <img src="images/toorso-logo.svg" alt="toorso-logo" style="width: 200px;">
+                <div class="input-group mb-3" style="margin: 1rem 0rem;">
+                    <input id="searchinput" type="text" class="form-control" placeholder="Restaurants, Hotels, Tour Operators..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button id="searchbtn" class="btn btn-outline-light" type="button" id="button-addon2">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section" style="background: #fff;">
+        <div class="container" style="padding: 1rem;">
+            <!-- <img src="images/filter-page-ad.png" alt="toorso-advertisement" style="padding: 1rem 0rem;width: 100%;height: 120px;object-fit: cover;"> -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: #525252;">Home</a></li>
+                    <li class="breadcrumb-item"><a href="filter.html" style="color: #525252;">Filters</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Restaurants & Fastfood</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-12 col-lg-5 px-0">
+                <div class="row mx-0">
+                    <div class="col-4 px-0 pr-2">
+                        <div class="border rounded" style="height: 150px; display: flex;vertical-align: middle;align-items: center">
+                            <img class="w-100" src="images/filter-one-logo.jpg" style="mix-blend-mode: multiply;">
+                        </div>
+                    </div>
+                    <div class="col-8 px-0 pl-2">
+                        <div class="border rounded" style="height: 150px;display: flex;flex-flow: column;align-items: center;justify-content: center;">
+                            <div style="display: flex;justify-content: center;align-items: center;width: 100%;margin: 5px 0rem;">
+                                <h4 style="margin: 0;font-size: 35px;font-weight: 400;color: #424242;">3.5</h4>
+                                <div style="width: 1px;height: 100%;background: #ccc;height: 40px;margin-left: 8px;"></div>
+                                <div style="display: flex;justify-content: flex-start;align-items: center;flex-flow: column;margin: 0rem 5px;">
+                                    <div class="star-ratings-sprite">
+                                        <span style="width:70%" class="star-ratings-sprite-rating"></span>
+                                    </div>
+                                    <small style="margin-top: 3px;color: #525252;"><i class="fa fa-user" style="margin-right: 5px;"></i>1,050 reviews</small>
+                                </div>
+                            </div>
+                            <img src="images/toorso-verified.jpg" alt="verified" style="width: 200px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-7 pr-md-0">
+                <div class="row mx-0 py-3 py-md-0 my-sm-3 my-3 my-md-0" style="background: #eee;">
+                    <div class="col-md-4 px-0 htt-0" style="display: flex;vertical-align:middle;align-items:center;">
+                        <div class="w-100 px-3">
+                            <h5 style="font-weight: 700;color: #c8102e;">Current Promotion</h5>
+                            <div style="width: 100%;height: 1px;background: #ccc;"></div>
+                            <p style="font-weight: 600;">Kap Sa 2020</p>
+                            <div style="width: 100%;height: 1px;background: #ccc;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-0 htt-0" style="display: flex;vertical-align:middle;align-items:center;">
+                        <div class="w-100 px-3">
+                            <small style="font-size: 10px;">Promotion period:</small>
+                            <p>25 Dec 2019 - 31 Jan 2020</p>
+                            <div style="width: 100%;height: 1px;background: #ccc;"></div>
+                            <p>Category: Footwares, Events</p>
+                            <button class="btn btn-danger mt-2" style="float: right;padding: 3px 6px;">More info</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-0">
+                        <div>
+                            <img src="images/filter-one-logo.jpg" alt="" style="width: 100%;height: 150px;object-fit: contain;mix-blend-mode: multiply;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section" style="margin: 2rem 0rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-7">
+                    <div style="margin-bottom: 1.5rem;">
+                        <h5 style="font-weight: 600;letter-spacing: -1px;">About Falafel & More</h5>
+                        <div style="width: 80%;height: 1px;background: #ccc;margin: 5px 0px;"></div>
+                        <p class="mt-3">FOR EVERYONE WHOE EXPECTS MOREA</p>
+                        <p id="about_desc" class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </br>
+                        <!-- <div id="readmore_overlay" class="readmore-bg"></div> -->
+                        <button id="desc_readmore" style="background: #ccc;color: #424242;padding: 2px 15px;outline: none;border: none;border-radius: 5px;">Read more</button>
+                    </div>
+
+
+                    <div class="my-5">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <p style="display: flex;align-items: center;"><i class="fa fa-map-marker-alt mr-1" style="color: #c8102e;"></i><strong>&nbsp;State</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <p>Muscat</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="display: flex;align-items: center;"><i class="fa fa-map-marker-alt mr-1" style="color: #c8102e;"></i><strong>&nbsp;Region & Area</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <p>Muscat, Ghubrah</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="display: flex;align-items: center;"><i class="fa fa-phone mr-1" style="color: #c8102e;"></i><strong>&nbsp;Phone</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <p>+96822060065</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="display: flex;align-items: center;"><i class="fa fa-clock mr-1" style="color: #c8102e;"></i><strong>&nbsp;Timing</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <p>10am to 10pm</p>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <p style="display: flex;align-items: center;"><i class="fa fa-home" style="color: #c8102e;"></i><strong>&nbsp;Address</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <p>Oman Avenues Mall</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="display: flex;align-items: center;"><i class="far fa-circle mr-2" style="color: #c8102e;"></i><strong>Area of specialisation</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <button style="background: #ccc;color: #424242;padding: 2px 15px;outline: none;border: none;border-radius: 5px;">Falafel</button>
+                                    <button style="background: #ccc;color: #424242;padding: 2px 15px;outline: none;border: none;border-radius: 5px;margin: 5px 0rem;">Grill & Steak house</button>
+                                    <button style="background: #ccc;color: #424242;padding: 2px 15px;outline: none;border: none;border-radius: 5px;margin: 5px 0rem;">Pastas</button>
+                                    <button style="background: #ccc;color: #424242;padding: 2px 15px;outline: none;border: none;border-radius: 5px;margin: 5px 0rem;">Pizas</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="margin-bottom: 2px;display: flex;align-items: center;"><i class="far fa-circle mr-2" style="color: #c8102e;"></i><strong>Social Preference</strong></p>
+                                </td>
+                                <td>
+                                    <p>:</p>
+                                </td>
+                                <td>
+                                    <button style="background: #c8102e;color: #fff;outline: none;border: none;border-radius: 50px;margin: 5px 0rem;padding: 5px 10px;"><i class="fab fa-facebook-f"></i></button>
+                                    <button style="background: #c8102e;color: #fff;outline: none;border: none;border-radius: 50px;margin: 5px 0rem;padding: 5px 10px;"><i class="fab fa-twitter"></i></button>
+                                    <button style="background: #c8102e;color: #fff;outline: none;border: none;border-radius: 50px;margin: 5px 0rem;padding: 5px 10px;"><i class="fab fa-instagram"></i></button>
+                                    <button style="background: #c8102e;color: #fff;outline: none;border: none;border-radius: 50px;margin: 5px 0rem;padding: 5px 10px;"><i class="fab fa-youtube"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="display: flex;">
+                            <button class="btn btn-danger mt-2" style="  padding: 3px 6px;"><i class="fa fa-envelope" style="color:solid #ccc;"></i><strong style="white-space: nowrap;margin-right: 0.25rem;font-size: 12px;margin-left: 4px;margin-right: 10px;">Send Email</strong></button> &nbsp; &nbsp;
+
+                         
+                            <button class="btn btn-danger mt-2" style="  padding: 3px 6px;"><i class="fa fa-globe-asia" style="color: solid #ccc;"></i><strong style="white-space: nowrap;margin-right: 0.25rem;font-size: 12px;margin-left: 4px;margin-right: 10px;">Visit Website</strong></button>
+                        </div>
+                    </div>
+
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h5 style="font-weight: 600;letter-spacing: -1px;color: #c8102e;">Facilities</h5>
+                        <div style="width: 80%;height: 1px;background: #ccc;margin: 5px 0px;"></div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;">u</i>Alcohol</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;">v</i>Catering</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;">w</i>Credit Card</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;">x</i>Sisha/Hookah</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;">y</i>Home Delivery</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;">m</i>Free Wifi</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 15px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;font-size: 25px;color: #4db53c;">z</i>Vegetarian</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <div id="main" role="main">
+                            <section class="slider">
+                                <div id="slider" class="flexslider" style="margin-bottom: 0rem;">
+                                    <ul class="slides">
+                                      <li><div style="width: 100%;height: 350px;"><img src="images/hotel-room-1.jpg" style="height: 350px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100%;height: 350px;"><img src="images/hotel-room-2.jpg" style="height: 350px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100%;height: 350px;"><img src="images/hotel-room-1.jpg" style="height: 350px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100%;height: 350px;"><img src="images/hotel-room-2.jpg" style="height: 350px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100%;height: 350px;"><img src="images/hotel-room-1.jpg" style="height: 350px;object-fit: cover;"/></div></li>
+                                      
+                                    </ul>
+                                  </div>
+                                  <div id="carousel" class="flexslider">
+                                    <ul class="slides">
+                                      <li><div style="width: 100px;height: 80px;"><img src="images/hotel-room-1.jpg" style="height: 80px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100px;height: 80px;"><img src="images/hotel-room-2.jpg" style="height: 80px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100px;height: 80px;"><img src="images/hotel-room-1.jpg" style="height: 80px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100px;height: 80px;"><img src="images/hotel-room-2.jpg" style="height: 80px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100px;height: 80px;"><img src="images/hotel-room-1.jpg" style="height: 80px;object-fit: cover;"/></div></li>
+                                      <li><div style="width: 100px;height: 80px;"><img src="images/hotel-room-1.jpg" style="height: 80px;object-fit: cover;"/></div></li>
+                                    </ul>
+                                  </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h5 style="font-weight: 600;letter-spacing: -1px;color: #c8102e;">Transportation Facilities</h5>
+                        <div style="width: 80%;height: 1px;background: #ccc;margin: 5px 0px;"></div>
+                        <div class="row" >
+                            <div class= "col-sm-6" >
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">A</i><span style="font-size: 15px;">Rent a car</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">B</i><span style="font-size: 15px;">Car with Driver</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">E</i><span style="font-size: 15px;">4 x 4 with Driver</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">C</i><span style="font-size: 15px;">Luxury 4 x 4 with driver</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">D</i><span style="font-size: 15px;">12 Seat Traveller</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">F</i><span style="font-size: 15px;">Pickup & Drop from near city</span></p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h5 style="font-weight: 600;letter-spacing: -1px;color: #c8102e;">Food Availability</h5>
+                        <div style="width: 80%;height: 1px;background: #ccc;margin: 5px 0px;"></div>
+                        <div class="row">
+                            <div class= "col-sm-6" >
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">i</i><span style="font-size: 15px;">Breakfast</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">m</i><span style="font-size: 15px;">Coffee with Snacks</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">j</i><span style="font-size: 15px;">Lunch</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">l</i><span style="font-size: 15px;">Own Cooking Available</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p style="font-size: 26px;display:flex;justify-content: flex-start;align-items:center"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">k</i><span style="font-size: 15px;">Dinner</span></p>                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-lg-5">
+                    <div>
+                        <h5 style="font-weight: 600;letter-spacing: -1px;">Falafel & More</h5>
+                        <div style="width: 80%;height: 1px;background: #ccc;margin: 5px 0px;"></div>
+
+
+                        <div style="width: 100%;border: 1px solid #ccc;padding: 0.5rem;border-radius: 5px;cursor: pointer;text-align: center;">
+                            <div class="row text-left">
+                                <div class="col-sm-12 col-md-4">
+                                    <small><strong>Check-in-date</strong></small>
+                                    <h3 style="color: #58a6e2;font-weight: 600;font-size: 16px;">Sun 19 Jan 2020</h3>
+                                    <p style="color: #ccc;">from 12.00</p>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <small><strong>Check-out-date</strong></small>
+                                    <h3 style="color: #58a6e2;font-weight: 600;font-size: 16px;">Sun 19 Jan 2020</h3>
+                                    <p style="color: #ccc;">from 12.00</p>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <small><strong>Guests</strong></small>
+                                    <h3 style="color: #58a6e2;font-weight: 600;font-size: 16px;"><span class="room-value">0</span> Rooms</h3>
+                                    <h3 style="color: #58a6e2;font-weight: 600;font-size: 16px;"><span class="adult-value">0</span> Adults</h3>
+                                    <h3 style="color: #58a6e2;font-weight: 600;font-size: 16px;"><span class="children-value">0</span> Children</h3>
+                                </div>
+                            </div>
+                            <div style="width: 100%;height: 1px;background: #ccc;margin: 5px 0px;"></div>
+
+                            <div class="collapse" id="collapseExample">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="datepicker-wrapper">
+                                                <small style="margin-left: 50px;">Check in</small>
+                                                <input id="datepicker" placeholder="__/__/__" style="border: none;" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="datepicker-wrapper" style="border-left: 5px solid #c8102e;">
+                                                <small style="margin-left: 50px;">Check out</small>
+                                                <input id="datepicker2" placeholder="__/__/__" style="border: none;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="expander" type="button" style="margin-bottom: 0.5rem;display: flex;justify-content: flex-start;align-items: center;width: 100%;box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);padding: 5px 8px;outline: none;background: #fff;border: none;">
+                                        <i class="fas fa-user-friends" style="color: #424242;"></i>
+                                        <div style="display: flex;justify-content: center;flex-flow: column;align-items: flex-start;padding: 0px 10px;">
+                                            <small style="font-size: 10px;">Guests</small>
+                                            <p style="font-weight: 600;margin: 0 !important;"><strong><span class="room-value">0</span> room, <span class="adult-value">0</span> adults, <span class="children-value">0</span> children</strong></p>
+                                        </div>
+                                    </button>
+                                    <div class="edit-numbers" style="display: block;">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="values-wrapper">
+                                                    <small>Rooms</small>
+                                                    <div class="value-buttons value-buttons-rooms">
+                                                        <button id="r_dec" class="btn btn-danger btn-sm">-</button>
+                                                        <input type="text" disabled value="0" name="">
+                                                        <button id="r_inc" class="btn btn-danger btn-sm">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="values-wrapper">
+                                                    <small>Adults</small>
+                                                    <div class="value-buttons value-buttons-adults">
+                                                        <button id="a_dec" class="btn btn-danger btn-sm">-</button>
+                                                        <input type="text" disabled value="0" name="">
+                                                        <button id="a_inc" class="btn btn-danger btn-sm">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="values-wrapper">
+                                                    <small>Children</small>
+                                                    <div class="value-buttons value-buttons-children">
+                                                        <button id="c_dec" class="btn btn-danger btn-sm">-</button>
+                                                        <input type="text" disabled value="0" name="">
+                                                        <button id="c_inc" class="btn btn-danger btn-sm">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-sm my-2"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Change Search</button>
+                        </div>
+                        
+                        <div>
+                            <div style="margin: 0.5rem 0rem;background: #e0e0e0;">
+                                     <div class="row mx-0 p-2">
+                                         <font size="5px;"><center> Price, Display, Booking & Payment Gateway Section</center></font>
+                                     <div style="padding-left:150px"><button class="btn btn-danger mt-2" style="  padding: 3px 6px;">Proceed to Pay</button></div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                        <div class="mt-2" style="display: flex;justify-content: stretch;align-items: stretch;width: 100%;background: #eee;">
+                            <button class="review-btn" data-toggle="collapse" data-target="#write-review" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-pencil-alt"></i>&nbsp;WRITE A REVIEW</button>
+                            <button class="review-btn" style="background: #525252;color: #fff;"><i class="far fa-comment"></i>&nbsp;REVIEWS & RATINGS</button>
+                        </div>
+
+                        <!-- write a review section  -->
+
+                        <div class="collapse" id="write-review">
+                            <div class="card card-body">
+
+                                <h6 class="mb-2">Write a review</h6>
+                                <div class="mb-2">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Enter Name">
+                                </div>
+                                <div class="mb-2">
+                                    <input type="email" class="form-control form-control-sm" placeholder="Enter Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control form-control-sm" rows="3" placeholder="Review (Maximum 250 Characters)"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="custom-control custom-radio mb-1">
+                                            <input type="radio" id="star1" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="star1"><b>5</b> Excellent</label>
+                                        </div>
+                                        <!-- <i class="fas fa-star"></i> <b>5</b> Excellent -->
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="custom-control custom-radio mb-1">
+                                            <input type="radio" id="star2" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="star2"><b>4</b> V.Good</label>
+                                        </div>
+                                        <!-- <i class="fas fa-star"></i> <b>4</b> V.Good -->
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="custom-control custom-radio mb-1">
+                                            <input type="radio" id="star3" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="star3"><b>3</b> Good</label>
+                                        </div>
+                                        <!-- <i class="fas fa-star"></i> <b>3</b> Good -->
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="custom-control custom-radio mb-1">
+                                            <input type="radio" id="star4" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="star4"><b>2</b> Average</label>
+                                        </div>
+                                        <!-- <i class="fas fa-star"></i> <b>2</b> Average -->
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="custom-control custom-radio mb-1">
+                                            <input type="radio" id="star5" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="star5"><b>1</b> Poor</label>
+                                        </div>
+                                        <!-- <i class="fas fa-star"></i> <b>1</b> Poor -->
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-danger btn-sm w-100 mt-3">Leave a Review</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- write a review section  -->
+
+                    <div style="margin: 0.5rem 0rem;background: #e0e0e0;">
+                        <div class="row">
+                            <div class="col-sm-3" style="overflow: hidden;">
+                                <div class="c100 p70 green" style="transform: scale(0.7);margin: 0;">
+                                    <span>3.5</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9" style="margin: 1rem 0rem;padding-left: 2rem;">
+                                <p style="font-weight: 400;">Based on <strong>1062 reviews</strong></p>
+                                <div class="star-ratings-sprite" style="transform: scale(1);margin-left: 0;">
+                                    <span style="width:70%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <div class="row" style="padding-right: 2rem;margin-top: 1.5rem;">
+                                    <!-- <div class="col-sm-6" style="margin: 1rem 0rem">
+                                        <div style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                                            <p>Amenities</p>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="progress" style="height: 4px;">
+                                            <div style="position: absolute;display: flex;justify-content: space-evenly;align-items: stretch;width: 100%;">
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                            </div>
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;background-color: #4db53c" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="margin: 1rem 0rem">
+                                        <div style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                                            <p>Service Quality</p>
+                                            <p>4.2</p>
+                                        </div>
+                                        <div class="progress" style="height: 4px;">
+                                            <div style="position: absolute;display: flex;justify-content: space-evenly;align-items: stretch;width: 100%;">
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                            </div>
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;background-color: #4db53c" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="margin: 1rem 0rem">
+                                        <div style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                                            <p>value for money</p>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="progress" style="height: 4px;">
+                                            <div style="position: absolute;display: flex;justify-content: space-evenly;align-items: stretch;width: 100%;">
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                            </div>
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;background-color: #4db53c" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="margin: 1rem 0rem">
+                                        <div style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                                            <p>Location</p>
+                                            <p>4.5</p>
+                                        </div>
+                                        <div class="progress" style="height: 4px;">
+                                            <div style="position: absolute;display: flex;justify-content: space-evenly;align-items: stretch;width: 100%;">
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                                <div style="width: 3px;height: 4px;background: #e0e0e0;"></div>
+                                            </div>
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;background-color: #4db53c" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin: 0.5rem 0rem;background: #e0e0e0;">
+                        <div class="row mx-0 p-2">
+                            <div class="col-2 px-0 pr-2">
+                                <img class="w-100" src="images/no-profile-pic.png">
+                            </div>
+                            <div class="col-10 px-0 pl-2">
+                                <div style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                                    <div style="display: flex;justify-content: flex-start;align-items: stretch;">
+                                        <p style="font-weight: 700;">JITHENDRA</p>
+                                        <div class="star-ratings-sprite" style="transform: scale(0.5);margin-left: -25px">
+                                            <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                        </div>
+                                    </div>
+                                    <p>15th May, 2017</p>
+                                </div>
+                                <small>Nice Service!!!</small>
+                                <div style="display: flex;justify-content: flex-start;align-items: stretch;width: 95%;margin-top: 1rem;">
+                                    <a class="review-like-btn" href="#" style="flex-grow: 1;"><i class="fa fa-thumbs-up"></i>&nbsp;Like</a>
+                                    <a class="review-like-btn" href="#"><i class="far fa-comment"></i>&nbsp;Comment</a>
+                                    <a class="review-like-btn" href="#"><i class="fa fa-share"></i>&nbsp;Share</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin: 0.5rem 0rem;background: #e0e0e0;">
+                        <div class="row mx-0 p-2">
+                            <div class="col-2 px-0 pr-2">
+                                <img class="w-100" src="images/no-profile-pic.png">
+                            </div>
+                            <div class="col-10 px-0 pl-2">
+                                <div style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                                    <div style="display: flex;justify-content: flex-start;align-items: stretch;">
+                                        <p style="font-weight: 700;">JITHENDRA</p>
+                                        <div class="star-ratings-sprite" style="transform: scale(0.5);margin-left: -25px">
+                                            <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                        </div>
+                                    </div>
+                                    <p>15th May, 2017</p>
+                                </div>
+                                <small>Nice Service!!!</small>
+                                <div style="display: flex;justify-content: flex-start;align-items: stretch;width: 95%;margin-top: 1rem;">
+                                    <a class="review-like-btn" href="#" style="flex-grow: 1;"><i class="fa fa-thumbs-up"></i>&nbsp;Like</a>
+                                    <a class="review-like-btn" href="#"><i class="far fa-comment"></i>&nbsp;Comment</a>
+                                    <a class="review-like-btn" href="#"><i class="fa fa-share"></i>&nbsp;Share</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="locationmap" style="margin: 1rem 0rem;">
+                        <h4 style="color: #c8102e;">Location Map</h4>
+                        <div style="width: 100%;height: 1px;background: #ccc;"></div>
+                        <iframe id="gmap_canvas" style="width: 100%;height: 250px;" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h4 style="font-weight: 600;">You may also like</h4>
+            <div style="width: 100%;height: 1px;background: #ccc;"></div>
+        </div>
+        <div class="container">
+            <div class="pt-3" style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                <h6 style="font-weight: 700;">Nearby Tourism Places</h6>
+                <a href="#">see all</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3 p-1 p-sm-3">
+                    <div class="near-tourism-result rounded p-2">
+                        <img class="w-100 mb-1" style="height:120px;object-fit: cover" src="images/hotel-room-1.jpg">
+                        <div class="pt-1 px-1" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <div style="display: flex;justify-content: flex-start;align-items: center;">
+                                <div class="star-ratings-sprite" style="transform: scale(0.5);margin-left: -30px;margin-right: -22px;">
+                                    <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <small style="font-weight: 700;font-size: 12px;"><span style="font-size: 18px;">0 of 5</span> (12 reviews)</small>
+                            </div>
+                            <h4 class="mb-1" style="font-weight: 800;color: #c8102e;font-size: 14px;">Wahiba Sands</h4>
+                            <small style="font-size: 10px">Category: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Location: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Distance: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Near by: <strong><a href="#" style="color: #c8102e;">AsdkajsAsdkajs Asdkajs</a></strong></small>
+                            <button class="mt-2" style="color: #fff;background: #c8102e;border-radius: 3px;outline: none;border: none;white-space: pre;">View more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 p-1 p-sm-3">
+                    <div class="near-tourism-result rounded p-2">
+                        <img class="w-100 mb-1" style="height:120px;object-fit: cover" src="images/hotel-room-1.jpg">
+                        <div class="pt-1 px-1" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <div style="display: flex;justify-content: flex-start;align-items: center;">
+                                <div class="star-ratings-sprite" style="transform: scale(0.5);margin-left: -30px;margin-right: -22px;">
+                                    <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <small style="font-weight: 700;font-size: 12px;"><span style="font-size: 18px;">0 of 5</span> (12 reviews)</small>
+                            </div>
+                            <h4 class="mb-1" style="font-weight: 800;color: #c8102e;font-size: 14px;">Wahiba Sands</h4>
+                            <small style="font-size: 10px">Category: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Location: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Distance: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Near by: <strong><a href="#" style="color: #c8102e;">AsdkajsAsdkajs Asdkajs</a></strong></small>
+                            <button class="mt-2" style="color: #fff;background: #c8102e;border-radius: 3px;outline: none;border: none;white-space: pre;">View more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 p-1 p-sm-3">
+                    <div class="near-tourism-result rounded p-2">
+                        <img class="w-100 mb-1" style="height:120px;object-fit: cover" src="images/hotel-room-1.jpg">
+                        <div class="pt-1 px-1" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <div style="display: flex;justify-content: flex-start;align-items: center;">
+                                <div class="star-ratings-sprite" style="transform: scale(0.5);margin-left: -30px;margin-right: -22px;">
+                                    <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <small style="font-weight: 700;font-size: 12px;"><span style="font-size: 18px;">0 of 5</span> (12 reviews)</small>
+                            </div>
+                            <h4 class="mb-1" style="font-weight: 800;color: #c8102e;font-size: 14px;">Wahiba Sands</h4>
+                            <small style="font-size: 10px">Category: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Location: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Distance: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Near by: <strong><a href="#" style="color: #c8102e;">AsdkajsAsdkajs Asdkajs</a></strong></small>
+                            <button class="mt-2" style="color: #fff;background: #c8102e;border-radius: 3px;outline: none;border: none;white-space: pre;">View more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 p-1 p-sm-3">
+                    <div class="near-tourism-result rounded p-2">
+                        <img class="w-100 mb-1" style="height:120px;object-fit: cover" src="images/hotel-room-1.jpg">
+                        <div class="pt-1 px-1" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <div style="display: flex;justify-content: flex-start;align-items: center;">
+                                <div class="star-ratings-sprite" style="transform: scale(0.5);margin-left: -30px;margin-right: -22px;">
+                                    <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                </div>
+                                <small style="font-weight: 700;font-size: 12px;"><span style="font-size: 18px;">0 of 5</span> (12 reviews)</small>
+                            </div>
+                            <h4 class="mb-1" style="font-weight: 800;color: #c8102e;font-size: 14px;">Wahiba Sands</h4>
+                            <small style="font-size: 10px">Category: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Location: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Distance: <strong>Asdkajs</strong></small>
+                            <small style="font-size: 10px">Near by: <strong><a href="#" style="color: #c8102e;">AsdkajsAsdkajs Asdkajs</a></strong></small>
+                            <button class="mt-2" style="color: #fff;background: #c8102e;border-radius: 3px;outline: none;border: none;white-space: pre;">View more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-5">
+            <div class="pt-3" style="display: flex;justify-content: space-between;align-items: stretch;width: 100%;">
+                <h6 style="font-weight: 700;">Similar Hotels</h6>
+                <a href="#">see all</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 p-1 p-sm-3">
+                    <div class="row mx-0 border rounded p-2">
+                        <div class="col-4 px-0 pr-1">
+                            <img class="w-100" style="height: 112px;object-fit:cover;" src="images/hotel-room-2.jpg" alt="">
+                        </div>
+                        <div class="col-8 px-0 pl-2" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <h4 style="font-weight: 800;color: #424242;margin: 0;font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"> Wahiba Sands Wahiba Sands Wahiba Sands</h4>
+                            <div class="star-ratings-sprite-green" style="transform: scale(0.7);margin-left: -17px;margin-right: -22px;">
+                                <span style="width:88%" class="star-ratings-sprite-rating-green"></span>
+                            </div>
+                            <small style="font-size: 12px;">1,578 reviews</small>
+                            <small style="font-weight: 600;"><i class="fa fa-map-marker-alt"></i>&nbsp;4.3 mi</small>
+                            <button style="padding: 8px 5px;color: #424242;font-weight: 700;background: #f9c01e;border-radius: 3px;outline: none;border: none;width: 30%;white-space: pre;margin-top: 5px;">OMR 75</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 p-1 p-sm-3">
+                    <div class="row mx-0 border rounded p-2">
+                        <div class="col-4 px-0 pr-1">
+                            <img class="w-100" style="height: 112px;object-fit:cover;" src="images/hotel-room-2.jpg" alt="">
+                        </div>
+                        <div class="col-8 px-0 pl-2" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <h4 style="font-weight: 800;color: #424242;margin: 0;font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"> Wahiba Sands Wahiba Sands Wahiba Sands</h4>
+                            <div class="star-ratings-sprite-green" style="transform: scale(0.7);margin-left: -17px;margin-right: -22px;">
+                                <span style="width:88%" class="star-ratings-sprite-rating-green"></span>
+                            </div>
+                            <small style="font-size: 12px;">1,578 reviews</small>
+                            <small style="font-weight: 600;"><i class="fa fa-map-marker-alt"></i>&nbsp;4.3 mi</small>
+                            <button style="padding: 8px 5px;color: #424242;font-weight: 700;background: #f9c01e;border-radius: 3px;outline: none;border: none;width: 30%;white-space: pre;margin-top: 5px;">OMR 75</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 p-1 p-sm-3">
+                    <div class="row mx-0 border rounded p-2">
+                        <div class="col-4 px-0 pr-1">
+                            <img class="w-100" style="height: 112px;object-fit:cover;" src="images/hotel-room-2.jpg" alt="">
+                        </div>
+                        <div class="col-8 px-0 pl-2" style="display: flex;justify-content: flex-start;align-items: stretch;flex-flow: column;">
+                            <h4 style="font-weight: 800;color: #424242;margin: 0;font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"> Wahiba Sands Wahiba Sands Wahiba Sands</h4>
+                            <div class="star-ratings-sprite-green" style="transform: scale(0.7);margin-left: -17px;margin-right: -22px;">
+                                <span style="width:88%" class="star-ratings-sprite-rating-green"></span>
+                            </div>
+                            <small style="font-size: 12px;">1,578 reviews</small>
+                            <small style="font-weight: 600;"><i class="fa fa-map-marker-alt"></i>&nbsp;4.3 mi</small>
+                            <button style="padding: 8px 5px;color: #424242;font-weight: 700;background: #f9c01e;border-radius: 3px;outline: none;border: none;width: 30%;white-space: pre;margin-top: 5px;">OMR 75</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <title>Toorso</title>
+</head>
+
+<body>
+
+    <button class="btn btn-danger btn-sm qenquiry" data-toggle="modal" data-target="#enquiry">Quick Enquiry</button>
+
+    <section class="red-bg">
+        <div class="container">
+            <div class="logo text-center">
+                <a href="#"><img class="p-3" src="img/logo.png" alt=""> </a>
+            </div>
+
+            <div class="flag-set text-center">
+                <img id="changePictureYo" src="img/oman.gif" alt="">
+                <div class="mt-2 mb-3">
+                    <select class="custom-select" onchange="changeImage(this)">
+                        <option selected value="oman">Oman</option>
+                        <option value="india">India</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text border-right-0"><i class="fas fa-search"></i></div>
+                </div>
+                <input type="text" class="form-control border-left-0" placeholder="Restaurants, Tour Operators, Hotels">
+            </div>
+
+            <div class="pb-3">
+                <button class="btn btn-light w-100">Search</button>
+            </div>
+
+            <!-- <div class="pb-3 ads-border">
+                <a href="#"><img class="w-100" src="img/ad-main.jpg" alt=""></a>
+            </div> -->
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div class="mt-3 ads-border">
+                <a href="#"><img class="w-100" src="img/ad-main.jpg" alt=""></a>
+            </div>
+
+            <div class="bg-light-grey text-center p-3 mt-3">
+                <h6>Search - Tourism Categories</h6>
+            </div>
+
+            <div class="main-categories">
+                <li class="mt-3">
+                    <a href="#">
+                        <img src="img/icons/icons8-bungee-jumping-50.png" alt="">
+                        <span>Adventure Activities</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-cafe-50.png" alt="">
+                        <span>Cafe & Coffee Shop</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-heart-health-50.png" alt="">
+                        <span>Health & Beauty</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-food-50.png" alt="">
+                        <span>Restaurants & Fastfoods</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-sports-mode-50.png" alt="">
+                        <span>Sports & Leisure</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-theatre-mask-50.png" alt="">
+                        <span>Arts & Culture</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-film-reel-50.png" alt="">
+                        <span>Entertainments</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-bed-50.png" alt="">
+                        <span>Hotels & Resorts</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-shopping-cart-50.png" alt="">
+                        <span>Shopping & Lifestyle</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-airplane-take-off-50.png" alt="">
+                        <span>Travel & Tourism</span>
+                    </a>
+                </li>
+
+            </div>
+
+            <div class="bg-light-grey text-center p-3 mt-3">
+                <h6>Search - Essential Categories</h6>
+            </div>
+
+            <div class="main-categories">
+                <li class="mt-3">
+                    <a href="#">
+                        <img src="img/icons/icons8-services-50.png" alt="">
+                        <span>Breakdown Services</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-graduation-cap-50.png" alt="">
+                        <span>Educational Institutions</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-money-bag-50.png" alt="">
+                        <span>Financial Services</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-car-cleaning-50.png" alt="">
+                        <span>Carwash & Autospa</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-washing-machine-50.png" alt="">
+                        <span>Laundry & Dryclean</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-gas-station-50.png" alt="">
+                        <span>Filling Stations</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-phone-off-the-hook-50.png" alt="">
+                        <span>Telecommunications</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-hospital-50.png" alt="">
+                        <span>Hospitals & Clinics</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-real-estate-50.png" alt="">
+                        <span>Realestate & Property</span>
+                    </a>
+                </li>
+
+                <li class="mt-2">
+                    <a href="#">
+                        <img src="img/icons/icons8-wedding-cake-50.png" alt="">
+                        <span>Weddings & Events</span>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-3">
+            <div class="border">
+                <a class="link-style" href="#">
+                    <div class="text-center p-1 bg-ads">Search Promotions- Click Here</div>
+                    <img class="w-100 bg-ads" src="img/ad-main.jpg" alt="">
+                </a>
+
+                <div class="clients-carousal1 owl-carousel owl-theme bg-ads p-1">
+                    <div class="item">
+                        <div class="client-slider">
+                            <img src="img/clients.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="client-slider">
+                            <img src="img/clients.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-3">
+            <div class="border">
+                <a class="link-style" href="#">
+                    <div class="text-center p-1 bg-ads">Search Promotions- Click Here</div>
+                    <img class="w-100 bg-ads" src="img/ad-main.jpg" alt="">
+                </a>
+
+                <div class="clients-carousal1 owl-carousel owl-theme bg-ads p-1">
+                    <div class="item">
+                        <div class="client-slider">
+                            <img src="img/clients.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="client-slider">
+                            <img src="img/clients.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-3">
+            <div class="card p-3 mb-3">
+                <div class="product-img mb-3">
+                    <img src="img/480.jpg" alt="">
+                </div>
+                <h6 class="card-name">Places to visit</h6>
+                <p>lorem ipsum lorem ipsum</p>
+                <a href="#" style="color:#c80f2e">View More</a>
+            </div>
+
+            <div class="card p-3 mb-3">
+                <div class="product-img mb-3">
+                    <img src="img/480.jpg" alt="">
+                </div>
+                <h6 class="card-name">Places to visit</h6>
+                <p>lorem ipsum lorem ipsum</p>
+                <a href="#" style="color:#c80f2e">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="mt-3 ads-border">
+            <a href="#"><img class="w-100" src="img/ad-main.jpg" alt=""></a>
+        </div>
+
+        <div class="vdo-slider owl-carousel owl-theme mt-5">
+            <div class="item">
+                <iframe class="w-100" height="240" src="https://www.youtube.com/embed/HE9mqv7cvdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="item">
+                <iframe class="w-100" height="240" src="https://www.youtube.com/embed/HE9mqv7cvdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="slider-buttons">
+            <div>
+                <button class="btn btn-dark previous-vdo"><i class="fas fa-arrow-left"></i></button>
+                <button class="btn btn-dark next-vdo"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h4>Toorso : Your Local Partner</h4>
+            <h6>Top rated offline mobile app</h6>
+        </div>
+
+        <div class="mt-3">
+            <p>Enter your Email here</p>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                    <button class="btn btn-danger" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+
+        <img class="w-100 mt-3" src="img/qrcode.jpg" alt="">
+
+        <div class="mt-3 ads-border">
+            <a href="#"><img class="w-100" src="img/ad-main.jpg" alt=""></a>
+        </div>
+    </section>
+
+    <section class="footer mt-3">
+        <div class="container py-3">
+            <h4>Directory</h4>
+            <hr style="border-top: 1px solid #fff;">
+            <li class="foot-links"><a href="#">Adventure Activities</a></li>
+            <li class="foot-links"><a href="#">Adventure Activities</a></li>
+            <li class="foot-links"><a href="#">Adventure Activities</a></li>
+
+            <div class="logo my-4">
+                <a href="#"><img src="img/logo.png" alt=""> </a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere, nibh non volutpat feugiat, metus lectus tristique elit, eget </p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="enquiry" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Quick Enquiry</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-2" id="" placeholder="Name">
+                    <input type="tel" class="form-control mb-2" id="" placeholder="Phone">
+                    <input type="Email" class="form-control mb-2" id="" placeholder="Email">
+                    <textarea class="form-control" id="" placeholder="Message"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script>
+        function changeImage(el) {
+            if (el.value == "oman") {
+                document.getElementById("changePictureYo").src = "img/oman.gif";
+            }
+            if (el.value == "india") {
+                document.getElementById("changePictureYo").src = "img/india.jpg";
+            }
+        }
+    </script>
+
+    <script>
+        $('.clients-carousal1').owlCarousel({
+            loop: true,
+            margin: 8,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 4
+                }
+            }
+        })
+
+        $('.vdo-slider').owlCarousel({
+            loop: true,
+            margin: 5,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+
+        var owl = $('.vdo-slider');
+        owl.owlCarousel();
+        $('.next-vdo').click(function() {
+            owl.trigger('next.owl.carousel');
+        })
+        $('.previous-vdo').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
+        })
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

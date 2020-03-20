@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9628c18b46.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Toorso | Travel & Tourism Guide Directory Website and Offline Mobile App</title>
+  </head>
+  <body>
+    
+    <div class="section header-bg" style="padding: 1.5rem 0rem;">
+        <div class="container">
+            <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;">
+                <img src="images/toorso-logo.svg" alt="toorso-logo" style="width: 200px;">
+                <div class="input-group mb-3" style="margin: 1rem 0rem;">
+                    <input id="searchinput" type="text" class="form-control" placeholder="Restaurants, Hotels, Tour Operators..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button id="searchbtn" class="btn btn-outline-light" type="button" id="button-addon2">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="section" style="background: #fff;">
+        <div class="container" style="width: 90%;margin: 0 auto;padding: 1rem;">
+            <img src="images/filter-page-ad.png" alt="toorso-advertisement" style="padding: 1rem 0rem;width: 100%;height: 120px;object-fit: cover;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: #525252;">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Filters</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+        <div class="row container" style="margin: 0 auto;">
+            <div class="col-sm-12 col-md-3">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                            <div class="card-header" id="headingThree" style="background: #606566;padding: 0;">
+                            <h2 class="mb-0">
+                                <button class="btn" type="button" data-toggle="collapse" style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Adventure Activities <i class="fa fa-caret-down"></i> </button>
+                            </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body" style="border-bottom: 1px solid #ccc;">
+                                <form style="display: flex;flex-flow: column;">
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="custom-control-label" for="inlineRadio2"><p style="cursor: pointer;font-size: 14px;margin: 0;">&nbsp;Sky Diving</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+                                        <label class="custom-control-label" for="inlineRadio3"><p style="cursor: pointer;font-size: 14px;margin: 0;">&nbsp;Via Ferrata</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="option2">
+                                        <label class="custom-control-label" for="inlineRadio4"><p style="cursor: pointer;font-size: 14px;margin: 0;">&nbsp;Wadi Bashing</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="option2">
+                                        <label class="custom-control-label" for="inlineRadio5"><p style="cursor: pointer;font-size: 14px;margin: 0;">&nbsp;Mountain</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio6" value="option2">
+                                        <label class="custom-control-label" for="inlineRadio6"><p style="cursor: pointer;font-size: 14px;margin: 0;">&nbsp;Diving Centre</p></label>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="card">
+                        <div class="card-header" id="headingOne" style="background: #c8102e;padding: 0;">
+                        <h2 class="mb-0">
+                            <button class="btn" type="button" data-toggle="collapse" style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Directory <i class="fa fa-caret-down"></i> </button>
+                        </h2>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <form>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio1" value="option2">
+                                    <label class="custom-control-label" for="radio1"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">A</i>&nbsp;Adventures & activities</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio2" value="option2">
+                                    <label class="custom-control-label" for="radio2"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">B</i>&nbsp;Art & Culture</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio3" value="option2">
+                                    <label class="custom-control-label" for="radio3"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">C</i>&nbsp;Cafe, Coffee shops</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio4" value="option2">
+                                    <label class="custom-control-label" for="radio4"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">D</i>&nbsp;Entertainment</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio5" value="option2">
+                                    <label class="custom-control-label" for="radio5"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">E</i>&nbsp;Health & Beauty</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio11" value="option2">
+                                    <label class="custom-control-label" for="radio11"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">F</i>&nbsp;Hotels & Resorts</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio6" value="option2">
+                                    <label class="custom-control-label" for="radio6"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">G</i>&nbsp;Restaurants & Fastfood</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio7" value="option2">
+                                    <label class="custom-control-label" for="radio7"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">H</i>&nbsp;Shopping, Lifestyle</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio8" value="option2">
+                                    <label class="custom-control-label" for="radio8"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">I</i>&nbsp;Sports & Leisure</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio9" value="option2">
+                                    <label class="custom-control-label" for="radio9"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">J</i>&nbsp;Travel & Tourism</p></label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                    <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio10" value="option2">
+                                    <label class="custom-control-label" for="radio10"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">M</i>&nbsp;Wedding & events</p></label>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo" style="background: #c8102e;padding: 0;">
+                            <h2 class="mb-0">
+                            <button style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Essential <i class="fa fa-caret-down"></i>
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <form>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio12" value="option2">
+                                        <label class="custom-control-label" for="radio12"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">L</i>&nbsp;Break Down Services</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio13" value="option2">
+                                        <label class="custom-control-label" for="radio13"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">M</i>&nbsp;Car rental services</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio14" value="option2">
+                                        <label class="custom-control-label" for="radio14"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">N</i>&nbsp;Car wash & auto spa</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio15" value="option2">
+                                        <label class="custom-control-label" for="radio15"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">S</i>&nbsp;Educational Institutions</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio16" value="option2">
+                                        <label class="custom-control-label" for="radio16"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">R</i>&nbsp;Filing Stations</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio17" value="option2">
+                                        <label class="custom-control-label" for="radio17"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">K</i>&nbsp;Financial Services</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio18" value="option2">
+                                        <label class="custom-control-label" for="radio18"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">P</i>&nbsp;Hospitals & Clinics</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio19" value="option2">
+                                        <label class="custom-control-label" for="radio19"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">Q</i>&nbsp;Laundry & dry clean</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio20" value="option2">
+                                        <label class="custom-control-label" for="radio20"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">I</i>&nbsp;Real Estate & Property</p></label>
+                                    </div>
+                                    <div class="custom-control custom-radio" style="margin: 5px 0px">
+                                        <input class="custom-control-input" type="radio" name="inlineRadioOptions" id="radio21" value="option2">
+                                        <label class="custom-control-label" for="radio21"><p style="font-size: 15px;white-space: nowrap;"><i style="font-family: 'iconFont';font-style: normal;">M</i>&nbsp;Wedding & events</p></label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9">
+                <div class="filter-search-section">
+                    <div class="input-group mb-3" style="margin-bottom: 0 !important;">
+                        <input type="text" class="form-control" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2" style="margin: 0.25rem">
+                    </div>
+                    <select class="custom-select" style="margin: 0.25rem;">
+                        <option selected>State</option>
+                        <option >Oman</option>
+                        <option value="1">India</option>
+                        <option value="2">Qatar</option>
+                        <option value="3">Kuwait</option>
+                    </select>
+                    <select class="custom-select" style="margin: 0.25rem;">
+                        <option selected>Region</option>
+                        <option >Oman</option>
+                        <option value="1">India</option>
+                        <option value="2">Qatar</option>
+                        <option value="3">Kuwait</option>
+                    </select>
+                    <select class="custom-select" style="margin: 0.25rem;">
+                        <option selected>Area</option>
+                        <option >Oman</option>
+                        <option value="1">India</option>
+                        <option value="2">Qatar</option>
+                        <option value="3">Kuwait</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="card" style="margin: 1rem 0rem;">
+                        <div class="main-card-wrapper">
+                            <div style="display: flex;justify-content: flex-start;align-items: flex-start;width: 100%;">
+                                <div style="background: url('./images/filter-one-main.jpg')" class="result-side-image"></div>
+                                <div class="result-details">
+                                    <h5 style="color: #c8102e;">Razam travel & tours</h5>
+                                    <small style="margin-bottom: 0.5rem;"><i class="fa fa-location-arrow"></i><strong>&nbsp;Region&nbsp;</strong>Muscat</small>
+                                    <small style="margin-bottom: 0.5rem;"><i class="fa fa-map-marker-alt"></i><strong>&nbsp;Area&nbsp;</strong>Azabia</small>
+                                    <small style="margin-bottom: 0.5rem;"><i class="fa fa-phone"></i><strong>&nbsp;Phone&nbsp;</strong>+968 96583620</small>
+                                    <small style="margin-bottom: 0.5rem;"><i class="fa fa-globe-asia"></i><strong>&nbsp;Timing&nbsp;</strong>08:00am - 04:00 / 09:00 am - 05:00pm</small>
+                                    <small style="margin-bottom: 0.5rem;"><i class="fa fa-envelope"></i><strong>&nbsp;Email&nbsp;</strong>info@.razantravel.com</small>
+                                    <small style="margin-bottom: 0.5rem;"><i class="fa fa-globe-asia"></i><strong>&nbsp;Website&nbsp;</strong>www.razantravel.com</small>
+                                </div>
+                            </div>
+                            <div class="view-button" style="display: flex;justify-content: center;align-items: center;flex-flow: column;">
+                                <img src="images/filter-one-logo.jpg" alt="filter-logo" style="width: 200px;">
+                                <button type="button" class="btn btn-danger" style="margin-bottom: 1rem;">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <style>
+        .popover{
+            border: 1px solid red;
+            color: red;
+        }
+        .popover .arrow{
+            display: none;
+        }
+    </style>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-3 result-sections">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingThree" style="background: #c8102e;padding: 0;">
+                                <h6 class="mb-0">
+                                    <button class="btn" type="button" data-toggle="false" style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Tourism Categories
+                                        <i class="fa fa-caret-down"></i>
+                                     </button>
+                                </h6>
+                                </div>
+                                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample" style="padding: 0.5rem;background: #ccc;height: auto;">
+                                    <div>
+                                        <select class="selectpicker form-control">
+                                            <optgroup label="Tourism Categories">
+                                                <option selected style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">U</i>&nbsp;Adventures & activities</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">V</i>&nbsp;Art & Culture</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">W</i>&nbsp;Cafe, Coffee shops</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">X</i>&nbsp;Entertainment</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">Y</i>&nbsp;Health & Beauty</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">Z</i>&nbsp;Hotels & Resorts</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">l</i>&nbsp;Restaurants & Fastfood</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">H</i>&nbsp;Shopping , Lifestyle</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">t</i>&nbsp;Sports & Leisure</div>'></optionselected>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">^</i>&nbsp;Travel & Tourism</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">_</i>&nbsp;Wedding & Events</div>'></option>
+                                            </optgroup>
+                                            <optgroup label="Essential Categories">
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">a</i>&nbsp;Break Down Services</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">b</i>&nbsp;Car Rental Services</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">c</i>&nbsp;Car Wash & auto spa</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">d</i>&nbsp;Educational Institution</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">h</i>&nbsp;Filing Stations</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">e</i>&nbsp;Financial Services</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">f</i>&nbsp;Hospitals & Clinics</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">g</i>&nbsp;Laundry & dry clean</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">i</i>&nbsp;Real Estate & Property</div>'></option>
+                                                <option style="color: #424242;font-size: 14px;" data-content='<div style="color: #424242"><i class="dropdown-icon" style="font-family: iconFont;font-style:normal;color: #424242 ">j</i>&nbsp;Real Estate & Property</div>'></option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo" style="background: #525252;padding: 0;">
+                                    <h2 class="mb-0">
+                                    <button style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" class="btn collapsed" type="button" data-toggle="false" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        Category 
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body" style="background: #eee;padding: 5px;">
+                                        <form>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio28" value="option2">
+                                                <label class="custom-control-label" for="radio28"><p style="font-size: 12px;white-space: nowrap;">&nbsp;African Cuisine(2)</p></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio29" value="option2">
+                                                <label class="custom-control-label" for="radio29"><p style="font-size: 12px;white-space: nowrap;">&nbsp;Afro Portuguese(0)</p></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio30" value="option2">
+                                                <label class="custom-control-label" for="radio30"><p style="font-size: 12px;white-space: nowrap;">&nbsp;Arabic Cuisine(13)</p></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio31" value="option2">
+                                                <label class="custom-control-label" for="radio31"><p style="font-size: 12px;white-space: nowrap;">&nbsp;Chinese Cuisine(9)</p></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio32" value="option2">
+                                                <label class="custom-control-label" for="radio32"><p style="font-size: 12px;white-space: nowrap;">&nbsp;Far Eastern Cuisine(3)</p></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio33" value="option2">
+                                                <label class="custom-control-label" for="radio33"><p style="font-size: 12px;white-space: nowrap;">&nbsp;French Cuisine(1)</p></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;;padding-bottom: 5px;">
+                                                <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio34" value="option2">
+                                                <label class="custom-control-label" for="radio34"><p style="font-size: 12px;white-space: nowrap;">&nbsp;Greek(0)</p></label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne" style="background: #525252;padding: 0;">
+                            <h2 class="mb-0">
+                                <button class="btn" type="button" data-toggle="collapse" style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Sort by Facilities 
+                                    <i class="fa fa-caret-down"></i>
+                                 </button>
+                            </h2>
+                            </div>
+                        
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+                            <div class="card-body" style="background: #eee;padding: 5px;">
+                                <form>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio1" value="option1">
+                                        <label class="custom-control-label" for="radio1"><p style="font-size: 12px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;">6</i>Alcohol</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio2" value="option2">
+                                        <label class="custom-control-label" for="radio2"><p style="font-size: 12px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 8px;">7</i>Catering</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio3" value="option3">
+                                        <label class="custom-control-label" for="radio3"><p style="font-size: 12px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 10px;">8</i>Credit Card</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio4" value="option4">
+                                        <label class="custom-control-label" for="radio4"><p style="font-size: 12px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 8px;">:</i>Home Delivery</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio5" value="option5">
+                                        <label class="custom-control-label" for="radio5"><p style="font-size: 12px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 16px;">9</i>Sisha / Hookah</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio6" value="option6">
+                                        <label class="custom-control-label" for="radio6"><p style="font-size: 12px;white-space: nowrap;"><i class="" style="font-family: 'iconFontTwo';font-style: normal;margin-right: 8px;color: green;">;</i>Vegetarian</p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio7" value="option7">
+                                        <label class="custom-control-label" for="radio7"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">(</i><span style="font-size: 12px;">Trekking</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio8" value="option8">
+                                        <label class="custom-control-label" for="radio8"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">7</i><span style="font-size: 12px;">Meeting Room</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio9" value="option6">
+                                        <label class="custom-control-label" for="radio9"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">#</i><span style="font-size: 12px;">Wild life safari</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio10" value="option6">
+                                        <label class="custom-control-label" for="radio10"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">!</i><span style="font-size: 12px;">Part Hall</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio11" value="option6">
+                                        <label class="custom-control-label" for="radio11"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">3</i><span style="font-size: 12px;">Fishing</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio12" value="option6">
+                                        <label class="custom-control-label" for="radio12"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">9</i><span style="font-size: 12px;">Free Parking</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio13" value="option6">
+                                        <label class="custom-control-label" for="radio13"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">z</i><span style="font-size: 12px;">Night Camping</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio14" value="option6">
+                                        <label class="custom-control-label" for="radio14"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">0</i><span style="font-size: 12px;">Concierge</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio15" value="option6">
+                                        <label class="custom-control-label" for="radio15"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">c</i><span style="font-size: 12px;">Tree House</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio16" value="option6">
+                                        <label class="custom-control-label" for="radio16"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;color: green;">8</i><span style="font-size: 12px;">Organic Food</span></p></label>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne" style="background: #525252;padding: 0;">
+                            <h2 class="mb-0">
+                                <button class="btn" type="button" data-toggle="collapse" style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Transportation Facilities 
+                                    <i class="fa fa-caret-down"></i>
+                                 </button>
+                            </h2>
+                            </div>
+                        
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingOne">
+                            <div class="card-body" style="background: #eee;padding: 5px;">
+                                <form>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio17" value="option6">
+                                        <label class="custom-control-label" for="radio17"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">o</i><span style="font-size: 12px;">Rent a car</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio18" value="option6">
+                                        <label class="custom-control-label" for="radio18"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">s</i><span style="font-size: 12px;">Car with Driver</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio19" value="option6">
+                                        <label class="custom-control-label" for="radio19"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">q</i><span style="font-size: 12px;">4 X 4 with Driver</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio20" value="option6">
+                                        <label class="custom-control-label" for="radio20"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">p</i><span style="font-size: 12px;">Luxury 4 X 4 with driver</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio21" value="option6">
+                                        <label class="custom-control-label" for="radio21"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">r</i><span style="font-size: 12px;">12 Seat Traveller</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio22" value="option6">
+                                        <label class="custom-control-label" for="radio22"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">t</i><span style="font-size: 12px;">Pickup & Drop from near city</span></p></label>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne" style="background: #525252;padding: 0;">
+                            <h2 class="mb-0">
+                                <button class="btn" type="button" data-toggle="collapse" style="display: flex;justify-content: space-between;align-items: center;width: 100%;color: #fff;" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Food Availabilities 
+                                    <i class="fa fa-caret-down"></i>
+                                 </button>
+                            </h2>
+                            </div>
+                        
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingOne">
+                            <div class="card-body" style="background: #eee;padding: 5px;">
+                                <form>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio23" value="option6">
+                                        <label class="custom-control-label" for="radio23"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">\</i><span style="font-size: 12px;">Breakfast</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio24" value="option6">
+                                        <label class="custom-control-label" for="radio24"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">/</i><span style="font-size: 12px;">Coffee with Snacks</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio25" value="option6">
+                                        <label class="custom-control-label" for="radio25"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">{</i><span style="font-size: 12px;">Lunch</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio26" value="option6">
+                                        <label class="custom-control-label" for="radio26"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">[</i><span style="font-size: 12px;">Own Cooking Available</span></p></label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox" style="margin: 5px 0px;border-bottom: 1px solid #ccc;padding-bottom: 5px;">
+                                        <input class="custom-control-input" type="checkbox" name="inlineRadioOptions" id="radio27" value="option6">
+                                        <label class="custom-control-label" for="radio27"><p style="font-size: 16px;white-space: nowrap;"><i class="" style="font-family: 'iconFontThree';font-style: normal;margin-right: 8px;">]</i><span style="font-size: 12px;">Dinner</span></p></label>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-9 result-sections" >
+                    <div class="filter-search-section">
+                        <div class="input-group mb-3" style="margin-bottom: 0 !important;">
+                            <input type="text" class="form-control" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2" style="margin: 0.25rem;font-size: 14px;">
+                        </div>
+                        <select class="custom-select" style="margin: 0.25rem;font-size: 14px;">
+                            <option selected>State</option>
+                            <option >Oman</option>
+                            <option value="1">India</option>
+                            <option value="2">Qatar</option>
+                            <option value="3">Kuwait</option>
+                        </select>
+                        <select class="custom-select" style="margin: 0.25rem;font-size: 14px;">
+                            <option selected>Region</option>
+                            <option >Oman</option>
+                            <option value="1">India</option>
+                            <option value="2">Qatar</option>
+                            <option value="3">Kuwait</option>
+                        </select>
+                        <select class="custom-select" style="margin: 0.25rem;font-size: 14px;">
+                            <option selected>Area</option>
+                            <option >Oman</option>
+                            <option value="1">India</option>
+                            <option value="2">Qatar</option>
+                            <option value="3">Kuwait</option>
+                        </select>
+                    </div>
+                    <div>
+    
+                    <div class="main-results" style="border: 1px solid #ccc;margin: 1rem 0rem;border-radius: 3px;">
+                        <div class="row" style="margin: 0 auto;">
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" style="padding:5px 5px;">
+                                <div class="result-first-section border-right-result" style="border-right: 1px solid #ccc;">
+                                    <div style="display: flex;flex-flow: column;justify-content: flex-start;align-items: center;width: 100%;">
+                                        <div style="position: relative;width: 200px;height: 200px;width: 100%">
+                                            <img src="images/filter-one-logo.jpg" alt="toorso-results" style="width: 100%;object-fit: cover;height: 100%;">
+                                        </div>
+                                        <button class="btn btn-danger" style="width: 100%;margin: 0.25rem;">VIEW MORE</button>
+                                    </div>
+                                    <div style="display: flex;flex-flow: column;margin: 0rem 1rem;width: 100%;">
+                                        <h5 style="color: #c8102e;">Razam travel & tours</h5>
+                                        <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-globe-asia" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;State:&nbsp;</strong>Kerala</small>
+                                        <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-location-arrow" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Region:&nbsp;</strong>Muscat</small>
+                                        <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-map-marker-alt" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Area:&nbsp;</strong>Azabia</small>
+                                        <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-phone" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Phone:&nbsp;</strong>+968 96583620</small>
+                                        <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-globe-asia" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Timing:&nbsp;</strong>Open 24 hours</small>
+                                        <div style="display: flex;">
+                                            <a class="result-links" style="margin-bottom: 2px;display: flex;align-items: center;font-size: 13px;margin-top: 12px;color: #c8102e;"><i class="fa fa-envelope" style="color: #c8102e;"></i><strong style="white-space: nowrap;margin-right: 0.25rem;font-size: 12px;margin-left: 4px;margin-right: 10px;">Send Email</strong></a>
+                                            <a class="result-links" style="margin-bottom: 2px;display: flex;align-items: center;font-size: 13px;margin-top: 12px;color: #c8102e;"><i class="fa fa-globe-asia" style="color: #c8102e;"></i><strong style="white-space: nowrap;margin-right: 0.25rem;font-size: 12px;margin-left: 4px;margin-right: 10px;">Visit Website</strong></a>
+                                        </div>
+                                        <div style="display: flex;justify-content: flex-start;align-items: center;width: 65%;flex-wrap: wrap;">
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">0</i></a>
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">1</i></a>
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">2</i></a>
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">3</i></a>
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">4</i></a>
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">5</i></a>
+                                            <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">6</i></a>
+                                        </div>
+                                    </div>
+                                    <div style="height: 100%;width: 1px;background: #525252;"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" style="padding:5px;">
+                                <div class="result-first-section"  style="border-right: none;">
+                                    <div style="display: flex;align-items: center;flex-flow: column;margin: 0rem 1rem;width: 100%;">
+                                        <p>Price Starts from</p>
+                                        <h5 style="text-decoration: line-through;color: #c8102e;">OMR 39</h5>
+                                        <h5><strong>OMR 33</strong></h5>
+                                        <button class="btn btn-success">ORDER NOW</button>
+                                        <div class="custom-control custom-checkbox" style="padding: 5px;margin: 0 auto;text-align: center;cursor: pointer;">
+                                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                            <label class="custom-control-label" for="customControlAutosizing">Compare</label>
+                                        </div>
+                                        <div style="display: flex;justify-content: center;align-items: center;width: 100%;margin: 5px 0rem;margin-top: 15px;">
+                                            <h4 style="margin: 0;font-size: 35px;font-weight: 400;color: #424242;">3.5</h4>
+                                            <div style="width: 1px;height: 100%;background: #ccc;height: 40px;margin-left: 8px;"></div>
+                                            <div style="display: flex;justify-content: flex-start;align-items: center;flex-flow: column;margin: 0rem 5px;">
+                                                <div class="star-ratings-sprite">
+                                                    <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                                </div>
+                                                <small style="margin-top: 3px;color: #525252;"><i class="fa fa-user" style="margin-right: 5px;"></i>1,050 reviews</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex;flex-flow: column;justify-content: flex-start;align-items: center;width: 100%;">
+                                        <div style="position: relative;width: 100%;height: 200px;border: 1px solid #ccc;">
+                                            <img src="images/filter-one-logo.jpg" alt="toorso-results" style="width: 100%;object-fit: cover;height: 100%;">
+                                        </div>
+                                        <button class="toorso-promo-btn" style="width: 100%;margin: 0.25rem;">View Promotion</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="main-results" style="border: 1px solid #ccc;margin: 1rem 0rem;border-radius: 3px;">
+                            <div class="row" style="margin: 0 auto;">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 " style="padding:5px;">
+                                    <div class="result-first-section border-right-result"  style="border-right: 1px solid #ccc;">
+                                        <div style="display: flex;flex-flow: column;justify-content: flex-start;align-items: center;width: 100%;">
+                                            <div style="position: relative;width: 200px;height: 200px;width: 100%">
+                                                <img src="images/filter-one-logo.jpg" alt="toorso-results" style="width: 100%;object-fit: cover;height: 100%;">
+                                            </div>
+                                            <button class="btn btn-danger" style="width: 100%;margin: 0.25rem;">VIEW MORE</button>
+                                        </div>
+                                        <div style="display: flex;flex-flow: column;margin: 0rem 1rem;width: 100%;">
+                                            <h5 style="color: #c8102e;">Razam travel & tours</h5>
+                                            <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-globe-asia" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;State:&nbsp;</strong>Kerala</small>
+                                            <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-location-arrow" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Region:&nbsp;</strong>Muscat</small>
+                                            <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-map-marker-alt" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Area:&nbsp;</strong>Azabia</small>
+                                            <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-phone" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Phone:&nbsp;</strong>+968 96583620</small>
+                                            <small style="margin-bottom: 2px;display: flex;align-items: center;"><i class="fa fa-globe-asia" style="color: #c8102e;"></i><strong style="color: #525252;">&nbsp;&nbsp;&nbsp;Timing:&nbsp;</strong>Open 24 hours</small>
+                                            <div style="display: flex;">
+                                                <a class="result-links" style="margin-bottom: 2px;display: flex;align-items: center;font-size: 13px;margin-top: 12px;color: #c8102e;"><i class="fa fa-envelope" style="color: #c8102e;"></i><strong style="white-space: nowrap;margin-right: 0.25rem;font-size: 12px;margin-left: 4px;margin-right: 10px;">Send Email</strong></a>
+                                                <a class="result-links" style="margin-bottom: 2px;display: flex;align-items: center;font-size: 13px;margin-top: 12px;color: #c8102e;"><i class="fa fa-globe-asia" style="color: #c8102e;"></i><strong style="white-space: nowrap;margin-right: 0.25rem;font-size: 12px;margin-left: 4px;margin-right: 10px;">Visit Website</strong></a>
+                                            </div>
+                                            <div style="display: flex;justify-content: flex-start;align-items: center;width: 65%;flex-wrap: wrap;">
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">0</i></a>
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">1</i></a>
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">2</i></a>
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">3</i></a>
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">4</i></a>
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">5</i></a>
+                                                <a href="#" class="facility-icon-text" data-content="Facility" rel="popover" data-placement="bottom"><i style="font-family: IconFontThree;font-size: 14px;padding: 2px;border: 1px solid #ccc;border-radius: 5px;margin: 15px 2px;color: #4F5656;font-style: normal;">6</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6" style="padding:5px;">
+                                    <div class="result-first-section" style="border-right: none;">
+                                        <div style="display: flex;align-items: center;flex-flow: column;margin: 0rem 1rem;width: 100%;">
+                                            <p>Price Starts from</p>
+                                            <h5 style="text-decoration: line-through;color: #c8102e;">OMR 39</h5>
+                                            <h5><strong>OMR 33</strong></h5>
+                                            <button class="btn btn-success">ORDER NOW</button>
+                                            <!-- <div class="custom-control custom-checkbox" style="padding: 5px;margin: 0 auto;text-align: center;cursor: pointer;">
+                                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                                <label class="custom-control-label" for="customControlAutosizing">Compare</label>
+                                            </div> -->
+                                            <div style="display: flex;justify-content: center;align-items: center;margin: 5px 0rem;margin-top: 15px;flex-flow: column;padding: 3px 18px;border: 1px solid #ccc;border-radius: 15px;">
+                                                <h4 style="margin: 0;font-size: 35px;font-weight: 400;color: #424242;margin-bottom: 5px;">3.5</h4>
+                                                <div style="display: flex;justify-content: flex-start;align-items: center;flex-flow: column;margin: 0rem 5px;">
+                                                    <div class="star-ratings-sprite">
+                                                        <span style="width:88%" class="star-ratings-sprite-rating"></span>
+                                                    </div>
+                                                    <small style="margin-top: 3px;color: #525252;"><i class="fa fa-user" style="margin-right: 5px;"></i>1,050 reviews</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex;flex-flow: column;justify-content: flex-start;align-items: center;width: 100%;">
+                                            <div style="position: relative;width: 100%;height: 200px;border: 1px solid #ccc;">
+                                                <img src="images/filter-one-logo.jpg" alt="toorso-results" style="width: 100%;object-fit: cover;height: 100%;">
+                                            </div>
+                                            <button class="toorso-promo-btn-two" style="width: 100%;margin: 0.25rem;text-decoration: line-through;">currently no Promotion</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="section" style="background: #4F5656;padding: 2rem 0rem;margin-top: 1rem">
+            <div class="row container" style="margin: 0 auto;" id="footer-links">
+                <div class="col-sm-12 col-md-2">
+                    <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                        <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                            <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Directory</h5>
+                        </div>
+                        <a href="#">Adventure Activities</a>
+                        <a href="#">Art & Culture</a>
+                        <a href="#">Cafe & Coffee shops</a>
+                        <a href="#">Entertainment</a>
+                        <a href="#">Health & Beauty</a>
+                        <a href="#">Hotels & Resorts</a>
+                        <a href="#">Restaurants & Fastfood</a>
+                        <a href="#">Shopping & Lifestyles</a>
+                        <a href="#">Sports & Leisure</a>
+                        <a href="#">Travel & Tourism</a>
+                        <a href="#">Wedding & Events</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                        <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                            <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Essential</h5>
+                        </div>
+                        <a href="#">Break Down Services</a>
+                        <a href="#">Car Rental Services</a>
+                        <a href="#">Car Wash & Auto Spa</a>
+                        <a href="#">Courier & Cargo</a>
+                        <a href="#">Educations</a>
+                        <a href="#">Filling Stations</a>
+                        <a href="#">Financial Services</a>
+                        <a href="#">Hospitals & Clinics</a>
+                        <a href="#">Laundry & Dry Clean</a>
+                        <a href="#">Real Estate & Property</a>
+                        <a href="#">Telecommunication</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                        <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                            <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">General Info</h5>
+                        </div>
+                        <a href="#">Adventure Activities</a>
+                        <a href="#">e-Services</a>
+                        <a href="#">Festivals in Oman</a>
+                        <a href="#">Free Zones in Oman</a>
+                        <a href="#">Industrial Estate</a>
+                        <a href="#">Islands In Oman</a>
+                        <a href="#">Jobs in Oman</a>
+                        <a href="#">Ministries in Oman</a>
+                        <a href="#">Sea Port in Oman</a>
+                        <a href="#">Traditional Villages</a>
+                        <a href="#">Veterinary Care</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                        <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                            <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Usefull info</h5>
+                        </div>
+                        <a href="#">About Oman</a>
+                        <a href="#">About Oman</a>
+                        <a href="#">Embassy & Consulates</a>
+                        <a href="#">Emergency Numbers</a>
+                        <a href="#">Places of Worship</a>
+                        <a href="#">Post Offices in Oman</a>
+                        <a href="#">Religious Sites</a>
+                        <a href="#">Setting up Business</a>
+                        <a href="#">Social Groups</a>
+                        <a href="#">Transport Services</a>
+                        <a href="#">Visa Requirements</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                        <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                            <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">News & Events</h5>
+                        </div>
+                        <a href="#">Current Events</a>
+                        <a href="#">Current Exhibitions</a>
+                        <a href="#">Upcoming Events</a>
+                        <a href="#">Upcoming Exhibitions</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                        <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                            <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Quick Links</h5>
+                        </div>
+                        <a href="#">About Us</a>
+                        <a href="#">Add Free Listing</a>
+                        <a href="#">Advertise with us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Exchange Rates</a>
+                        <a href="#">Flight Information - OAMC</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Weather</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="section" style="padding: 1rem 0rem;background: #4f5656;width: 100%;border-top: 1px solid #eee;">
+        <div class="container">
+            <div style="display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;">
+                <div>
+                    <img src="images/toorso-logo.svg" alt="logo-footer" style="width: 100px;">
+                    <small style="margin: 0;color: #eee;margin-left: 0.5rem;">Digital & Online/Offline Mobile App. All trademarks & images are properties of their respective owners. All Rights reserved.</small>
+                </div>
+                <div style="display: flex;justify-content: space-evenly;align-items: center;">
+                    <a href="#" class="footer-social-icons"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

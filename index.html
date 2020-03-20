@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://www.toorso.com/themes/frontend/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9628c18b46.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Toorso | Travel & Tourism Guide Directory Website and Offline Mobile App</title>
+  </head>
+  <body>
+      
+    <!-- header  -->
+    <div class="section" style="background: #c8102e;">
+        <div class="header-bg" style="padding-top: 1.5rem;">
+            <div class="container row" style="width: 100%;margin: 0 auto;">
+                <div class="col-sm-12 col-lg-8 col-md-12" style="padding-bottom: 2rem;">
+                    <div style="display: flex;justify-content: flex-start;align-items: center;width: 100%;margin-bottom: 2rem;">
+                        <img src="images/toorso-logo.svg" alt="toorse" style="width: 35%;margin: 1rem 0rem;">
+                        <div style="display: flex;flex-flow: column;align-items: center;justify-content: center;margin-left: 2rem;margin-top: 1rem;">
+                            <img id="nationImageView" src="images/oman.jpg" alt="oman-toorso" style="width: 70px;margin-bottom: 5px;border: 1px solid #fff;">
+                            <select id="nationChange">
+                                <option selected value="images/oman.jpg"> Oman</option>
+                                <option value="images/india.png">India</option>
+                                <option value="images/qatar.jpg">Qatar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <h2 style="color: #ff8da0;font-weight: 300;margin-top: 3rem;">Oman's top  <strong style="font-weight: 700;color: #ffff;">Travel Agencies</strong></h2> -->
+                    <div class="rw-wrapper d-md-block d-sm-none d-none" style="margin-top: 3rem;">
+                        <h4 class="rw-sentence" style="font-size: 19px;">
+                            <span style="font-weight: 100;">Oman's Top&nbsp;</span>
+                            <div class="rw-words rw-words-1">
+                                <span>Hotels</span>
+                                <span>Restaurants</span>
+                                <span style="white-space: pre;">Tourism Destinations</span>
+                            </div>
+                        </h4>
+                    </div>
+                    <div class="input-group mb-3 search-group-toorso">
+                        <div style="display: flex;margin-right: 1rem;width: 100%;">
+                            <i class="fa fa-search" style="height: 40px;background: #fff;color: #ccc;display: flex;justify-content: center;align-items: center;padding: 0 20px;border-radius: 5px 0px 0px 5px;"></i>
+                            <input id="searchinput" type="text" class="form-control" placeholder="Restaurants, Hotels, Tour Operators..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div style="position: absolute;width: 100%;background: #fff;top: 40px;padding: 0.5rem;box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);z-index: 100;display: none;">
+                            <div style="width: 100%;color: #eee;padding: 1rem 0rem;border-bottom: 1px solid #eee;">
+                                <a href="#">Oman's Best Hotel</a>
+                            </div>
+                            <div style="width: 100%;color: #eee;padding: 1rem 0rem;border-bottom: 1px solid #eee;">
+                                <a href="#">Oman's Best Hotel</a>
+                            </div>
+                            <div style="width: 100%;color: #eee;padding: 1rem 0rem;border-bottom: 1px solid #eee;">
+                                <a href="#">Oman's Best Hotel</a>
+                            </div>
+                            <div style="width: 100%;color: #eee;padding: 1rem 0rem;border-bottom: 1px solid #eee;">
+                                <a href="#">Oman's Best Hotel</a>
+                            </div>
+                        </div>
+                        <div class="input-group-append">
+                            <button id="searchbtn" class="btn btn-outline-light" type="button" id="button-addon2" style="margin: 1rem 0rem;">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12" style="display: flex;align-items: center;justify-content: flex-end;flex-wrap: wrap;">
+                    <div style="display: flex;align-items: center;width: 100%;flex-wrap: wrap;">
+                        <!-- <div style="width: 40%;">
+                        
+                        </div> -->
+                        <a href="#" style="display: flex;justify-content: center;align-items: center;width: 45%;flex-flow: column;margin: 0 auto;padding-top: 1rem;border: 1px solid #ccc;margin-bottom: 1rem;border-radius: 15px">
+                            <img src="images/toorso-ebook.jpg" alt="e-book" style="width: 80%;">
+                            <p style="color: #fff;font-size: 13px;white-space: pre;">e-Book coming soon</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- types of categories  -->
+    <div class="search-types" style="margin-top: 1rem;">
+        <div class="d-sm-none d-md-block d-none" style="background: #ccc;padding-top: 1rem;">
+            <div class="row container" style="margin: 0 auto;">
+                <div class="col-sm-12 col-md-6" style="padding: 0">
+                    <h5 style="text-align: center;margin-bottom: 1rem;padding: 1rem;background: #ccc;">Tourism Categories</h5>
+                </div>
+                <div class="col-sm-12 col-md-6" style="padding: 0">
+                    <h5 style="text-align: center;margin-bottom: 1rem;padding: 1rem;background: #ccc;">Essential Categories</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row container" style="margin: 0 auto;">
+            <div class="col-sm-12 col-md-6">
+                <h5 class="d-sm-block d-md-none" style="text-align: center;margin-bottom: 1rem;padding: 1rem;background: #ccc;width: 120%;margin-left: -10%;">Tourism Categories</h5>
+                <div id="tourismsearch" class="row" style="padding: 1rem 0rem;border-right: 1px solid #424242;margin-bottom: 1rem;">
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">A</p>&nbsp;Adventures & activities</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">B</p>&nbsp;Art & Culture</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">C</p>&nbsp;Cafe, Coffee shops</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">D</p>&nbsp;Entertainment</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">E</p>&nbsp;Health & Beauty</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">F</p>&nbsp;Hotels & Resorts</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">G</p>&nbsp;Restaurants & Fastfood</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">H</p>&nbsp;Shopping, Lifestyle</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">I</p>&nbsp;Sports & Leisure</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">J</p>&nbsp;Travel & Tourism</a></div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <h5 class="d-sm-block d-md-none" style="text-align: center;margin-bottom: 1rem;padding: 1rem;background: #ccc;width: 120%;margin-left: -10%;">Essential Categories</h5>
+                <div id="essentialsearch" class="row" style="padding: 1rem 0rem;margin: 0 auto;">
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">L</p>&nbsp;Break Down Services</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">M</p>&nbsp;Car rental services</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">N</p>&nbsp;Car wash & auto spa</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">S</p>&nbsp;Educational Institutions</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">R</p>&nbsp;Filing Stations</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">K</p>&nbsp;Financial Services</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">P</p>&nbsp;Hospitals & Clinics</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">Q</p>&nbsp;Laundry & dry clean</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">I</p>&nbsp;Real Estate & Property</a></div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" style="cursor: pointer;"><a class="iconLink linkHover"><p class="fontIcon">m</p>&nbsp;Wedding & events</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- promotions  -->
+    <div class="section">
+        <div class="row container" style="margin: 0 auto;padding: 2rem 0rem;">
+            <div class="col-sm-12 col-md-6" style="overflow: hidden;">
+                <div class="promotions" style="border: 1px solid #424242;">
+                    <a href="#" style="position: absolute;top: 0;text-align: center;width: 100%;font-size: 20px;padding: 0.5rem 0rem;background: rgba(255, 255, 255, 0.6);color: #424242;font-weight: 500;">Search Promotions - click here</a>
+                    <img src="images/super-sale.png" alt="super-sale" style="width: 100%;">
+                    <div style="padding: 5px; cursor: pointer;">
+                        <div class="promotion-slider owl-carousel owl-theme">
+                            <img src="images/promotion-one.png" alt="promotions" class="" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-one.png" alt="promotions" class="" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-one.png" alt="promotions" class="" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-one.png" alt="promotions" class="" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-one.png" alt="promotions" class="" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-one.png" alt="promotions" class="" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6" style="overflow: hidden;">
+                <div class="promotions" style="border: 1px solid #424242;">
+                    <a href="#" style="position: absolute;top: 0;text-align: center;width: 100%;font-size: 20px;padding: 0.5rem 0rem;background: rgba(255, 255, 255, 0.6);color: #424242;font-weight: 500;">Search Places - click here</a>
+                    <img src="images/promotions-two.png" alt="super-sale" style="width: 100%;">
+                    <div style="padding: 5px; cursor: pointer;">
+                        <div class="promotion-slider owl-carousel owl-theme">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                            <img src="images/promotion-two.jpg" alt="promotions" class="item" style="width: 100px;margin: 0px 0px;margin-right: 0px !important;border-radius: 5px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- blogs  -->
+    <div class="section">
+        <div class="row container" style="margin: 0 auto;padding: 0;">
+            <div class="col-sm-12 col-md-2" style="padding: 0 8px;">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;height: 100%;border: 1px solid #eee;">
+                    <img src="images/cms_34.jpg" alt="cms34" style="width: 100%;" >
+                    <h6 style="margin: 1rem 0.5rem;">Places to visit</h6>
+                    <p style="margin: 0rem 0.5rem;font-size: 13px;">Amid the ever-changing states of the Arabian Gulf, Oman offers a refreshing reminder of...</p>
+                    <a style="margin: 0.5rem 0.5rem;" href="#">view more</a>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-2" style="padding: 0 8px;">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;height: 100%;border: 1px solid #eee;">
+                    <img src="images/cms_34.jpg" alt="cms34" style="width: 100%;" >
+                    <h6 style="margin: 1rem 0.5rem;">Places to visit</h6>
+                    <p style="margin: 0rem 0.5rem;font-size: 13px;">Amid the ever-changing states of the Arabian Gulf, Oman offers a refreshing reminder of...</p>
+                    <a style="margin: 0.5rem 0.5rem;" href="#">view more</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 0 8px;">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;height: 100%;border: 1px solid #eee;">
+                    <img src="images/cms_34.jpg" alt="cms34" style="width: 100%;" >
+                    <h6 style="margin: 1rem 0.5rem;">Places to visit</h6>
+                    <p style="margin: 0rem 0.5rem;font-size: 13px;">Amid the ever-changing states of the Arabian Gulf, Oman offers a refreshing reminder of...</p>
+                    <a style="margin: 0.5rem 0.5rem;" href="#">view more</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 0 8px;">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;height: 100%;border: 1px solid #eee;">
+                    <img src="images/cms_34.jpg" alt="cms34" style="width: 100%;" >
+                    <h6 style="margin: 1rem 0.5rem;">Places to visit</h6>
+                    <p style="margin: 0rem 0.5rem;font-size: 13px;">Amid the ever-changing states of the Arabian Gulf, Oman offers a refreshing reminder of...</p>
+                    <a style="margin: 0.5rem 0.5rem;" href="#">view more</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 0 8px;">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;height: 100%;border: 1px solid #eee;">
+                    <img src="images/cms_34.jpg" alt="cms34" style="width: 100%;" >
+                    <h6 style="margin: 1rem 0.5rem;">Places to visit</h6>
+                    <p style="margin: 0rem 0.5rem;font-size: 13px;">Amid the ever-changing states of the Arabian Gulf, Oman offers a refreshing reminder of...</p>
+                    <a style="margin: 0.5rem 0.5rem;" href="#">view more</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 0 8px;">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;height: 100%;border: 1px solid #eee;">
+                    <img src="images/cms_34.jpg" alt="cms34" style="width: 100%;" >
+                    <h6 style="margin: 1rem 0.5rem;">Places to visit</h6>
+                    <p style="margin: 0rem 0.5rem;font-size: 13px;">Amid the ever-changing states of the Arabian Gulf, Oman offers a refreshing reminder of...</p>
+                    <a style="margin: 0.5rem 0.5rem;" href="#">view more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- advertisement  -->
+    <div class="section" style="margin: 1rem 0rem;">
+        <div class="row container" style="margin: 0 auto;align-items: center;">
+            <div class="col-md-7 col-sm-12">
+                <a href="#">
+                    <img src="images/companyad.png" alt="ads1" style="width: 100%;">
+                </a>
+            </div>
+            <div class="col-md-5 col-sm-12" style="padding-top: 17px">
+                <div class="vdo-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <iframe class="w-100" height="138px" src="https://www.youtube.com/embed/HE9mqv7cvdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="item">
+                        <iframe class="w-100" height="138px" src="https://www.youtube.com/embed/HE9mqv7cvdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- <div class="slider-buttons">
+                    <div>
+                        <button class="btn btn-dark previous-vdo"><i class="fas fa-arrow-left"></i></button>
+                        <button class="btn btn-dark next-vdo"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile apps  -->
+    <div class="section" style="background: #eee;padding-top: 2rem;">
+        <div class="row container" style="margin: 0 auto;">
+            <div class="col-sm-12 col-md-5">
+                <div style="display: flex;justify-content: center;align-items: flex-start;width: 100%;flex-flow: column;">
+                    <h4 style="padding-top: 1rem;color: #525252;">toorso - Your Local Search Partner</h4>
+                    <h6 style="margin: 1rem 0rem;color: #424242;">Top rated offline mobile app for free, easy & smart.<br>Your search at your fingertip. Download our App for free!</h6>
+                    <p style="margin: 1rem 0rem;color: #424242;font-weight: 100;">Enter your Email here and we will send you<br>the download link as mail or you can Scan QR Code.</p>
+                    <div class="input-group mb-3" style="flex-wrap: nowrap;">
+                        <input type="text" class="" placeholder="Enter email.." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 0.3rem 1rem;margin: 1rem 0rem;padding-right: 2rem;width: 70%;">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-danger rounded-0" style="background: #c8102e;color: #fff;margin: 1rem 0rem;" type="button" id="button-addon2">SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+                <img src="images/mobile-devies.png" alt="mobile" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- stats  -->
+    <div class="section" style="margin: 2rem 0rem;">
+        <div class="row container" style="margin: 0 auto;">
+            <div class="col-sm-6 col-md-3">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: center;width: 100%;">
+                    <i class="stats-icon fa fa-download"></i>
+                    <h4 style="margin-top: 1rem;"><span class="count">7500</span>+ </h4>
+                    <p>App Downloads</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: center;width: 100%;">
+                    <i class="stats-icon fa fa-list"></i>
+                    <h4 style="margin-top: 1rem;"><span class="count">2300</span>+ </h4>
+                    <p>Business Listings</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: center;width: 100%;">
+                    <i class="stats-icon fa fa-cubes"></i>
+                    <h4 style="margin-top: 1rem;"><span class="count">220</span>+ </h4>
+                    <p>Categories</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: center;width: 100%;">
+                    <i class="stats-icon fa fa-globe-asia"></i>
+                    <h4 style="margin-top: 1rem;"><span class="count">1</span>+ </h4>
+                    <p>Country</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="section" style="background: #4F5656;padding: 2rem 0rem;margin-top: 1rem">
+        <div class="row container" style="margin: 0 auto;" id="footer-links">
+            <div class="col-sm-12 col-md-2">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                    <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                        <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Directory</h5>
+                    </div>
+                    <a href="#">Adventure Activities</a>
+                    <a href="#">Art & Culture</a>
+                    <a href="#">Cafe & Coffee shops</a>
+                    <a href="#">Entertainment</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Hotels & Resorts</a>
+                    <a href="#">Restaurants & Fastfood</a>
+                    <a href="#">Shopping & Lifestyles</a>
+                    <a href="#">Sports & Leisure</a>
+                    <a href="#">Travel & Tourism</a>
+                    <a href="#">Wedding & Events</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                    <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                        <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Essential</h5>
+                    </div>
+                    <a href="#">Break Down Services</a>
+                    <a href="#">Car Rental Services</a>
+                    <a href="#">Car Wash & Auto Spa</a>
+                    <a href="#">Courier & Cargo</a>
+                    <a href="#">Educations</a>
+                    <a href="#">Filling Stations</a>
+                    <a href="#">Financial Services</a>
+                    <a href="#">Hospitals & Clinics</a>
+                    <a href="#">Laundry & Dry Clean</a>
+                    <a href="#">Real Estate & Property</a>
+                    <a href="#">Telecommunication</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                    <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                        <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">General Info</h5>
+                    </div>
+                    <a href="#">Adventure Activities</a>
+                    <a href="#">e-Services</a>
+                    <a href="#">Festivals in Oman</a>
+                    <a href="#">Free Zones in Oman</a>
+                    <a href="#">Industrial Estate</a>
+                    <a href="#">Islands In Oman</a>
+                    <a href="#">Jobs in Oman</a>
+                    <a href="#">Ministries in Oman</a>
+                    <a href="#">Sea Port in Oman</a>
+                    <a href="#">Traditional Villages</a>
+                    <a href="#">Veterinary Care</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                    <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                        <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Usefull info</h5>
+                    </div>
+                    <a href="#">About Oman</a>
+                    <a href="#">About Oman</a>
+                    <a href="#">Embassy & Consulates</a>
+                    <a href="#">Emergency Numbers</a>
+                    <a href="#">Places of Worship</a>
+                    <a href="#">Post Offices in Oman</a>
+                    <a href="#">Religious Sites</a>
+                    <a href="#">Setting up Business</a>
+                    <a href="#">Social Groups</a>
+                    <a href="#">Transport Services</a>
+                    <a href="#">Visa Requirements</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                    <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                        <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">News & Events</h5>
+                    </div>
+                    <a href="#">Current Events</a>
+                    <a href="#">Current Exhibitions</a>
+                    <a href="#">Upcoming Events</a>
+                    <a href="#">Upcoming Exhibitions</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+                <div style="display: flex;flex-flow: column;justify-content: center;align-items: flex-start;width: 100%;">
+                    <div style="border-bottom: 1px solid #fafafa;width: 100%;margin-bottom: 1rem;">
+                        <h5 style="margin: 0.5rem 0rem;width: 100%;text-align: left;font-weight: 700;color: #fff;">Quick Links</h5>
+                    </div>
+                    <a href="#">About Us</a>
+                    <a href="#">Add Free Listing</a>
+                    <a href="#">Advertise with us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Exchange Rates</a>
+                    <a href="#">Flight Information - OAMC</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Weather</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="padding: 1rem 0rem;background: #4f5656;width: 100%;border-top: 1px solid #eee;">
+        <div class="container">
+            <div style="display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;">
+                <div>
+                    <img src="images/toorso-logo.svg" alt="logo-footer" style="width: 100px;">
+                    <small style="margin: 0;color: #eee;margin-left: 0.5rem;">Digital & Online/Offline Mobile App. All trademarks & images are properties of their respective owners. All Rights reserved.</small>
+                </div>
+                <div style="display: flex;justify-content: space-evenly;align-items: center;">
+                    <a href="#" class="footer-social-icons"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="footer-social-icons"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal  -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background: url('./images/headerbg.png') center no-repeat;color: #fff;border-radius: 0px;">
+              <h5 class="modal-title"><i class="fa fa-envelope"></i> Send and Enquiry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom01">Name *</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for=" ">Category *</label>
+                            <select class="custom-select" id="validationCustom02">
+                                <option selected>Adventure Activities</option>
+                                <option value="1">Adventure Activities</option>
+                                <option value="2">Adventure Activities</option>
+                                <option value="3">Adventure Activities</option>
+                                <option value="4">Adventure Activities</option>
+                                <option value="5">Adventure Activities</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">Country *</label>
+                            <select class="custom-select" id="validationCustom02">
+                                <option selected>Oman</option>
+                                <option value="1">India</option>
+                                <option value="1">Qatar</option>
+                                <option value="1">Duabi</option>
+                                <option value="1">Kuwait</option>
+                                <option value="1">Bahrain</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">Phone *</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="Enter Phone No." required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom05">Email *</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Enter Valid Email ID" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom06">Message <small>(Maximum 250 words)</small></label>
+                            <textarea class="form-control" id="validationCustom06" rows="3"></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+.red-bg {
+    background-color: #c80f2e;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.input-group-text i {
+    color: #b5b5b5;
+}
+
+.btn-light {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.btn-light:hover {
+    background-color: #fff;
+    color: #c80f2e;
+}
+
+.btn-collapse {
+    color: #fff;
+    background-color: #c80f2e;
+    /* border-radius: 0px; */
+}
+
+.btn-collapse i {
+    float: right;
+    font-size: 20px;
+}
+
+.btn-collapse-secondary {
+    color: #fff;
+    background-color: #606568;
+    /* border-radius: 0px; */
+}
+
+.btn-collapse-secondary i {
+    float: right;
+    font-size: 20px;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c80f2e !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    background-color: #c80f2e !important;
+}
+
+.ads-border a img {
+    border-radius: .25rem;
+}
+
+.select-set {
+    border: 1px solid #606568;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: .25rem;
+}
+
+.select-set label {
+    color: #606568;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: unset;
+}
+
+.select-set select {
+    /* border-radius: unset; */
+    background-color: #606568;
+    color: #fff;
+}
+
+.bg-grey-box {
+    background-color: #abb5b7;
+    border-radius: .25rem;
+    border: 1px solid #3d3d3d;
+}
+
+.breadcrumb li a {
+    color: #3d3d3d;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.breadcrumb li {
+    color: #c80f2e !important;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card {
+    box-shadow: 0px 0px 10px 0px #d6d6d6;
+}
+
+.product-img img {
+    width: 100%;
+    /* max-width: 180px; */
+    height: 160px;
+    object-fit: contain;
+    /* background-color: #eaeaea; */
+}
+
+.card-name {
+    color: #c80f2e;
+}
+
+.card-attributes {
+    font-size: 17px;
+}
+
+.card-attributes i {
+    color: #c80f2e;
+    font-size: 14px;
+}
+
+.card-attributes {
+    color: #3d3d3d;
+}
+
+.card-attributes span {
+    color: #000;
+    font-weight: 400;
+}
+
+.page-link {
+    color: #c80f2e;
+    /* border: 1px solid #c80f2e; */
+}
+
+.footer {
+    color: #fff;
+    background-color: #4e5756;
+}
+
+.foot-links,
+.foot-links a {
+    text-decoration: none;
+    color: #fff;
+    list-style-type: none;
+}
+
+.qenquiry {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.stars i {
+    color: #606568;
+    /* font-size: 20px; */
+}
+
+.stars .red-star {
+    color: #c80f2e;
+}
+
+.rating {
+    color: #3d3d3d;
+    font-weight: 600;
+}
+
+.rating span {
+    /* font-size: 26px; */
+}
+
+.flag-set img {
+    width: 100px;
+    border: 2px solid #fff;
+}
+
+.flag-set select {
+    width: 100px;
+    height: 34px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.iframe {
+    width: 100%;
+    /* height: 300px; */
+}
+
+.middler {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.star-rating-box {
+    border-top: 1px solid #c80f2e;
+    border-bottom: 1px solid #c80f2e;
+}
+
+.star-rating-box .red-star {
+    color: #c80f2e;
+}
+
+.big-rating {
+    font-size: 35px;
+    font-weight: 600;
+    color: #4e5756;
+}
+
+.bg-light-grey {
+    background-color: #dfdfdf;
+}
+
+.main-categories li a img {
+    width: 40px;
+    border: 1px solid #c80f2e;
+    padding: 7px;
+    border-radius: .25rem;
+    margin-right: 10px;
+}
+
+.main-categories li a span {
+    color: #3d3d3d;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.main-categories li,
+.main-categories li a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.client-slider {
+    background-color: #fff;
+    border-radius: .25rem;
+    object-fit: contain;
+}
+
+.link-style {
+    color: #3d3d3d;
+    font-size: 14px;
+    background-color: #eaeaea;
+}
+
+.link-style:hover {
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+.bg-ads {
+    background-color: #eaeaea;
+}
+
+.list-group-item {
+    background-color: #606568;
+    color: #fff;
+}
+
+.table-section {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* phones */
+
+@media (max-width: 575.98px) {
+    .logo img {
+        width: 200px;
+    }
+}
+
+
+/* landscape phones */
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+
+/* ipad */
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+
+/* ipda pro */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}

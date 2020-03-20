@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'plusicon-regular';
+    src: url('fonts/plusicon-regular.eot?ze2enu');
+    src: url('fonts/plusicon-regular.eot?#iefixze2enu') format('embedded-opentype'), url('fonts/plusicon-regular.ttf?ze2enu') format('truetype'), url('fonts/plusicon-regular.woff?ze2enu') format('woff'), url('fonts/plusicon-regular.svg?ze2enu#plusicon-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="plusicon-"],
+[class*=" plusicon-"] {
+    font-family: 'plusicon-regular';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* line-height: 1; */
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.plusicon-adventure:before {
+    content: "\41";
+}
+
+.plusicon-art:before {
+    content: "\42";
+}
+
+.plusicon-cafe:before {
+    content: "\43";
+}
+
+.plusicon-entertainment:before {
+    content: "\44";
+}
+
+.plusicon-health:before {
+    content: "\45";
+}
+
+.plusicon-hotels:before {
+    content: "\46";
+}
+
+.plusicon-restaurant-a:before {
+    content: "\47";
+}
+
+.plusicon-shopping:before {
+    content: "\48";
+}
+
+.plusicon-sports:before {
+    content: "\49";
+}
+
+.plusicon-travel:before {
+    content: "\4a";
+}
+
+.plusicon-bank:before {
+    content: "\4b";
+}
+
+.plusicon-breakdown:before {
+    content: "\4c";
+}
+
+.plusicon-carrent:before {
+    content: "\4d";
+}
+
+.plusicon-carwash:before {
+    content: "\4e";
+}
+
+.plusicon-cargo:before {
+    content: "\4f";
+}
+
+.plusicon-hospital:before {
+    content: "\50";
+}
+
+.plusicon-laundry:before {
+    content: "\51";
+}
+
+.plusicon-fuel:before {
+    content: "\52";
+}
+
+.plusicon-education:before {
+    content: "\53";
+}
+
+.plusicon-telecommunication:before {
+    content: "\54";
+}
+
+.plusicon-beach:before {
+    content: "\55";
+}
+
+.plusicon-restaurant-b:before {
+    content: "\56";
+}
+
+.plusicon-internet:before {
+    content: "\57";
+}
+
+.plusicon-bar:before {
+    content: "\58";
+}
+
+.plusicon-fitness:before {
+    content: "\59";
+}
+
+.plusicon-spa:before {
+    content: "\5a";
+}
+
+.plusicon-swimming:before {
+    content: "\61";
+}
+
+.plusicon-roomsafe:before {
+    content: "\62";
+}
+
+.plusicon-disable:before {
+    content: "\63";
+}
+
+.plusicon-watersports:before {
+    content: "\64";
+}
+
+.plusicon-alcohol:before {
+    content: "\65";
+}
+
+.plusicon-catering:before {
+    content: "\66";
+}
+
+.plusicon-homedelivery:before {
+    content: "\67";
+}
+
+.plusicon-shisha:before {
+    content: "\68";
+}
+
+.plusicon-vegetarian:before {
+    content: "\69";
+    color: #060;
+}
+
+.plusicon-creditcard:before {
+    content: "\6a";
+}
+
+.plusicon-square:before {
+    content: "\6b";
+}
+
+.plusicon-realestate:before {
+    content: "\6c";
+}
+
+.plusicon-wedding:before {
+    content: "\6d";
+}
